@@ -9,11 +9,11 @@
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                        <a href="/" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                        <a href="/" class="<?= uri_is('/') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> hover:bg-gray-700 rounded-md px-3 py-2 text-sm font-medium"
                            aria-current="page">Home</a>
-                        <a href="/about.php" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                        <a href="/about" class=" <?= uri_is('/about') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> rounded-md px-3 py-2 text-sm font-medium"
                            aria-current="page">About</a>
-                        <a href="/contact.php" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                        <a href="/contact" class=" <?= uri_is('/contact') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> rounded-md px-3 py-2 text-sm font-medium"
                            aria-current="page">Contact</a>
                     </div>
                 </div>
@@ -96,13 +96,12 @@
     <div class="md:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="/" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+            <a href="/" class="<?= $_SERVER['REQUEST_URI'] === '/' ? 'bg-gray-900 text-white' : 'text-gray-300' ?> hover:bg-gray-700 rounded-md px-3 py-2 text-sm font-medium"
                aria-current="page">Home</a>
-            <a href="/about.php" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+            <a href="/about" class=" <?= $_SERVER['REQUEST_URI'] === '/about' ? 'bg-gray-900 text-white' : 'text-gray-300' ?> rounded-md px-3 py-2 text-sm font-medium"
                aria-current="page">About</a>
-            <a href="/contact.php" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+            <a href="/contact" class=" <?= $_SERVER['REQUEST_URI'] === '/contact' ? 'bg-gray-900 text-white' : 'text-gray-300' ?> rounded-md px-3 py-2 text-sm font-medium"
                aria-current="page">Contact</a>
-
         </div>
         <div class="border-t border-gray-700 pb-3 pt-4">
             <div class="flex items-center px-5">
