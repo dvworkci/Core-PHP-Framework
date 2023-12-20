@@ -1,3 +1,5 @@
 <?php
 
-echo "Core Framework";
+$heading = 'Home';
+
+require "views/index.view.php";
