@@ -24,10 +24,6 @@ function routeTo($uri,$routes){
     }
 }
 
-$routes = [
-    '/' => 'controllers/index.php',
-    '/about' => 'controllers/about.php',
-    '/contact' => 'controllers/contact.php',
-];
+$routes = require 'routes.php';
 
 routeTo($uri,$routes);

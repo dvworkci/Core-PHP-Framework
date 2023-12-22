@@ -1,15 +1,17 @@
 <?php
 
 require 'functions.php';
-//require 'router.php';
 require 'Database.php';
+require 'Response.php';
+require 'router.php';
 
-$config = require 'config.php';
+//$id = $_GET['id'];
+//$query = "select * from posts where id = :id";
+//
+//$post = $db->query($query,['id' => $id])->fetch();
+//
+//dd($post);
 
-$db = new Database($config['database']);
-
-$posts = $db->query("select * from posts")->fetchAll();
-
-foreach ($posts as $post){
-    echo "<li>" . $post["title"] . "</li>";
-}
+//foreach ($posts as $post){
+//    echo "<li>" . $post["title"] . "</li>";
+//}

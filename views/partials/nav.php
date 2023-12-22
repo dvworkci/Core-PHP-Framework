@@ -13,6 +13,8 @@
                            aria-current="page">Home</a>
                         <a href="/about" class=" <?= uri_is('/about') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> rounded-md px-3 py-2 text-sm font-medium"
                            aria-current="page">About</a>
+                        <a href="/notes" class=" <?= uri_is('/note') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> rounded-md px-3 py-2 text-sm font-medium"
+                           aria-current="page">Notes</a>
                         <a href="/contact" class=" <?= uri_is('/contact') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> rounded-md px-3 py-2 text-sm font-medium"
                            aria-current="page">Contact</a>
                     </div>
