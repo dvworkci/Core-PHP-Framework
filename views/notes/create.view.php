@@ -1,13 +1,13 @@
 <!-- HEAD  -->
-<?php require "partials/head.php"; ?>
+<?php require base_path("views/partials/head.php"); ?>
 <!-- HEAD END -->
 
 <!-- NAV BAR  -->
-<?php require "partials/nav.php"; ?>
+<?php require base_path("views/partials/nav.php"); ?>
 <!-- NAV BAR END -->
 
 <!-- HEADER  -->
-<?php require "partials/header.php"; ?>
+<?php require base_path("views/partials/header.php"); ?>
 <!-- HEADER END -->
 
 
@@ -79,5 +79,5 @@
 </main>
 
 <!-- FOOTER  -->
-<?php require "partials/footer.php"; ?>
+<?php require base_path("views/partials/footer.php"); ?>
 <!-- FOOTER END -->

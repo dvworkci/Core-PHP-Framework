@@ -1,14 +1,14 @@
 <?php
-require 'Validator.php';
+require base_path('Validator.php');
 
-$config = require 'config.php';
-$db = new Database($config['database']);
+// $config = require 'config.php';
+$config = require base_path('config.php');
+$db = new Database($config['database'],'dushyant','dushyant@mysql');
 
-$heading = 'Create new note';
-
+// $heading = 'Create new note';
+$errors = [];
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
 //    $validator = new Validator();
-    $errors = [];
 
 //    if(strlen($_POST['body']) === 0){
 //        $errors['body'] = 'A body is required.';
@@ -24,9 +24,14 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     if(empty($errors)){
         $db->query("INSERT INTO notes(body,user_id) VALUE(:body,:user_id) ",[
             'body' => $_POST['body'],
-            'user_id' => 1
+            'user_id' => 3
         ]);
     }
 }
 
-require 'views/notes/note-create.view.php';
+// require 'views/notes/create.view.php';
+
+view("notes/create.view.php",[
+    'heading' => 'Create New Note',
+    'errors' => $errors
+]);
