@@ -19,6 +19,12 @@
         <p>
             <?= $note['body'] ?>
         </p>
+
+        <form action="" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="hidden" name="id" value="<?= $note['id'] ?>">
+            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</button>
+        </form>
     </div>
 </main>
 
